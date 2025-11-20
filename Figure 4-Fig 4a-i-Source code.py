@@ -80,32 +80,32 @@ def points_circle(n_points = 10):
 def MM_kin(c, km, vmax):
     return (vmax*c)/(km+c)
 
-DAT_sim_conc =  np.genfromtxt("sim data/DAT_sim_conc.csv",delimiter=",")
-DAT_sim_diff =  np.genfromtxt("sim data/DAT_sim_rel_time.csv",delimiter=",")
-DAT_sim_dist =  np.genfromtxt("sim data/DAT_sim_dist.csv",delimiter=",")
-DAT_sim_gradient =  np.genfromtxt("sim data/DAT_sim_gradient.csv",delimiter=",")
-DAT_sim_conc_surface =  np.genfromtxt("sim data/DAT_sim_conc_surface.csv",delimiter=",")
-DAT_sim_DA_diff =  np.genfromtxt("sim data/DAT_sim_DA_diff.csv",delimiter=",")
-DAT_sim_DA_diff_3_ce =  np.genfromtxt("sim data/DAT_sim_DA_diff_3_ce.csv",delimiter=",")
+DAT_sim_conc =  np.genfromtxt("DAT_sim_conc.csv",delimiter=",")
+DAT_sim_diff =  np.genfromtxt("DAT_sim_rel_time.csv",delimiter=",")
+DAT_sim_dist =  np.genfromtxt("DAT_sim_dist.csv",delimiter=",")
+DAT_sim_gradient =  np.genfromtxt("DAT_sim_gradient.csv",delimiter=",")
+DAT_sim_conc_surface =  np.genfromtxt("DAT_sim_conc_surface.csv",delimiter=",")
+DAT_sim_DA_diff =  np.genfromtxt("DAT_sim_DA_diff.csv",delimiter=",")
+DAT_sim_DA_diff_3_ce =  np.genfromtxt("DAT_sim_DA_diff_3_ce.csv",delimiter=",")
 
 custom_cycler = cycler(color=['#8B0000', '#FF0000', '#F08080', '#808080', '#000000'])
 
 #% From newer Python simulation (same results, just different format)
 # Load files
-sim_result_20 = np.load("sim data/sim_result_20.npy")
-sim_result_40 = np.load("sim data/sim_result_40.npy")
-sim_result_80 = np.load("sim data/sim_result_80.npy")
-sim_result_160 = np.load("sim data/sim_result_160.npy")
-sim_result_uni = np.load("sim data/sim_result_uni.npy")
+sim_result_20 = np.load("sim_result_20.npy")
+sim_result_40 = np.load("sim_result_40.npy")
+sim_result_80 = np.load("sim_result_80.npy")
+sim_result_160 = np.load("sim_result_160.npy")
+sim_result_uni = np.load("sim_result_uni.npy")
 
 
 #% From newer Python simulation (same results, just different format)
 # Load files
-steady_result_20 = np.loadtxt("sim data/steady_state_DAT_20nm.csv")
-steady_result_40 = np.loadtxt("sim data/steady_state_DAT_40nm.csv")
-steady_result_80 = np.loadtxt("sim data/steady_state_DAT_80nm.csv")
-steady_result_160 = np.loadtxt("sim data/steady_state_DAT_160nm.csv")
-steady_result_uni = np.loadtxt("sim data/steady_state_DAT_unclus.csv")
+steady_result_20 = np.loadtxt("steady_state_DAT_20nm.csv")
+steady_result_40 = np.loadtxt("steady_state_DAT_40nm.csv")
+steady_result_80 = np.loadtxt("steady_state_DAT_80nm.csv")
+steady_result_160 = np.loadtxt("steady_state_DAT_160nm.csv")
+steady_result_uni = np.loadtxt("steady_state_DAT_unclus.csv")
 mean_py_sim_steady = np.stack((steady_result_20,steady_result_40,steady_result_80,
                                steady_result_160,steady_result_uni)).T
 
